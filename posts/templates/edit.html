@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %} 
+{% load static %}
+
+
+{% load cloudinary %}  
+
+
+
+<section class="content">
+  <section class="post_form">
+      <div class="tweet-post">
+  
+  <div class="input-area">
+      <form action="/edit/{{ post.id }}/" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Your name" value="{{ post.name }}" maxlength="14" required>
+          <textarea name="body" placeholder="What's happening?" maxlength="140" required>{{ post.body }}</textarea>
+          {% if post.image is not Null %}
+              <img class="edit-image" src="{{ post.image.url }}" style="width: 200px;" >
+          {% endif %}
+          <div class="bottom-area">
+            <div class="mb-0">
+                <input class="form-control form-control-sm" name="image" type="file">
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                    <button class="btn btn-light me-sm-2 " type="submit">Cancel</button>
+                    <button class="btn btn-light" type="submit">Update</button>
+                  </div>
+              
+             
+               
+            </div>
+          </div>
+      </form>
+  </div>
+</div>
+  </section> 
+
+
+ 
+
+
+
+
+
+
+
+<!-- 
+    <section class="content">
+        <section class="post_form">
+            <form action="/edit/{{ post.id }}/" method="POST" enctype="multipart/form-data">
+            
+              {% csrf_token %} -->
+    
+                <!-- {{ form.image }}  -->
+                 <!-- {% load static %} 
+                  <img src="{% static 'img/flower.jpeg' %}" />   -->
+                  <!-- {{ post.name }} -->
+            <!-- <input type="text" name="name" value="{{ post.name }} " placeholder="" required>
+            <textarea name="body"  placeholder="" required>{{ post.body }}</textarea> -->
+            
+                 <!-- <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="image" value="" > -->
+                   
+                  <!-- <input type="submit" value="Cancel">
+                  <input type="submit" value="Update">
+                
+              
+    
+            
+            </form>  
+        </section> 
+ -->
+
+
+ {% endblock %}  
