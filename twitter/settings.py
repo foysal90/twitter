@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-kf#*7@yam482@duh!fx85fa7#(h8gv-zg!!lr2ei=98ctlpv*e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fathomless-springs-82857.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['rocky-citadel-40633.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
