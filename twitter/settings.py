@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kf#*7@yam482@duh!fx85fa7#(h8gv-zg!!lr2ei=98ctlpv*e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -87,14 +87,14 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.progresql',
-       
-        'NAME': 'd2udsom6cajqc4',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': 'd2udsom6cajqc4',
 
-        'HOST': 'ec2-3-95-85-91.compute-1.amazonaws.com',
-        'PORT': '5432',
-        'USER': 'ngimfuwtqpcnvs',
-        'PASSWORD': 'e394ecbb01ae2b361f2a03883cccd16cf772f9aff5051e8ab9f6fad5f2c036d0',
+        # 'HOST': 'ec2-3-95-85-91.compute-1.amazonaws.com',
+        # 'PORT': '5432',
+        # 'USER': 'ngimfuwtqpcnvs',
+        # 'PASSWORD': 'e394ecbb01ae2b361f2a03883cccd16cf772f9aff5051e8ab9f6fad5f2c036d0',
          
     }
 }
